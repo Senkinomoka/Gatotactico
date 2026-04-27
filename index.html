@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gatotáctico</title>
+  <meta name="description" content="Plataforma moderna para compartir ideas y estrategia.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="nav">
+  <h1>🐱 Gatotáctico</h1>
+  <nav>
+    <a href="#inicio">Inicio</a>
+    <a href="#features">Características</a>
+    <a href="#contacto">Contacto</a>
+  </nav>
+</header>
+
+<section id="inicio" class="hero">
+  <h2>Construye. Comparte. Destaca.</h2>
+  <p>Una plataforma moderna pensada para creatividad y comunidad.</p>
+  <button onclick="scrollToSection('features')">Comenzar</button>
+</section>
+
+<section id="features" class="features">
+  <div class="card">
+    <h3>⚡ Rápido</h3>
+    <p>Carga optimizada para cualquier dispositivo.</p>
+  </div>
+  <div class="card">
+    <h3>🎯 Profesional</h3>
+    <p>Diseño limpio y enfocado en resultados.</p>
+  </div>
+  <div class="card">
+    <h3>🔒 Seguro</h3>
+    <p>Buenas prácticas y estructura escalable.</p>
+  </div>
+</section>
+
+<section id="contacto" class="contact">
+  <h2>Contacto</h2>
+  <form onsubmit="enviar(event)">
+    <input type="text" placeholder="Tu nombre" required>
+    <input type="email" placeholder="Tu correo" required>
+    <textarea placeholder="Mensaje" required></textarea>
+    <button type="submit">Enviar</button>
+  </form>
+</section>
+<section class="comentarios">
+  <h2>💬 Comentarios en vivo</h2>
+
+  <div class="coment-box">
+    <input id="comentarioInput" placeholder="Escribe algo...">
+    <button onclick="enviarComentario()">Enviar</button>
+  </div>
+
+  <ul id="listaComentarios"></ul>
+</section>
+
+<script type="module" src="script.js"></script>
+
+<footer>
+  <p>© 2026 Gatotáctico | Todos los derechos reservados</p>
+</footer>
+
+<script src="script.js"></script>
+<script type="module">
+  // Import the functions you need from the SDKs you need
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/12.12.1/firebase-app.js";
+  import { getAnalytics } from "https://www.gstatic.com/firebasejs/12.12.1/firebase-analytics.js";
+  // TODO: Add SDKs for Firebase products that you want to use
+  // https://firebase.google.com/docs/web/setup#available-libraries
+
+  // Your web app's Firebase configuration
+  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+  const firebaseConfig = {
+    apiKey: "AIzaSyBRRvPkLptsbZxAi21TCJ57Dv_hznIfsrM",
+    authDomain: "gatitotactico-26ba3.firebaseapp.com",
+    projectId: "gatitotactico-26ba3",
+    storageBucket: "gatitotactico-26ba3.firebasestorage.app",
+    messagingSenderId: "431644945170",
+    appId: "1:431644945170:web:f0e6650198e21f9b61a1cb",
+    measurementId: "G-442WM08W42"
+  };
+
+  // Initialize Firebase
+  const app = initializeApp(firebaseConfig);
+  const analytics = getAnalytics(app);
+</script>
+</body>
+</html>
